@@ -32,11 +32,22 @@ public class DeckOfCards {
         }
     }
 
-    public static void main(String[] args) {
-
-        System.out.println("Welcome to Deck of Cards Program");
-
-        DeckOfCards.deckOfcards();
-
+    public void player() {
+        System.out.println("Enter number of players minimum 2 , maximum 4 : ");
+        Scanner scanner = new Scanner(System.in);
+        int player = scanner.nextInt();
+        if (player >= 2 && player <= 4) { //greater than = 2  and less than = 4
+            System.out.println(player + " Players will play the Game ");
+        } else {
+            System.out.println("Enter the no within the range ");
+        }
+        scanner.close();
     }
-}
+        public static void main (String[]args){
+
+            System.out.println("Welcome to Deck of Cards Program");
+
+            DeckOfCards.deckOfcards();
+
+        }
+    }
