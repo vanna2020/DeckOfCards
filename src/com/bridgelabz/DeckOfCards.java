@@ -42,12 +42,21 @@ public class DeckOfCards {
             System.out.println("Enter the no within the range ");
         }
         scanner.close();
+        sequenceOfPlay(player);
     }
-        public static void main (String[]args){
 
-            System.out.println("Welcome to Deck of Cards Program");
 
-            DeckOfCards.deckOfcards();
-
+    public void sequenceOfPlay(int player) {
+        for (int i = 1; i <= player; i++) {
+            System.out.println("Player " + i + "Getting card");
         }
     }
+
+    public static void main(String[] args) {
+        System.out.println("welcome to Deck of Cards");
+        DeckOfCards deck = new DeckOfCards();
+        deck.deckOfcards();
+        deck.player();
+    }
+
+}
